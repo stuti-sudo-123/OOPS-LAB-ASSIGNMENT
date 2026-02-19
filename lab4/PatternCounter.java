@@ -14,11 +14,8 @@ public class PatternCounter {
         for(int i = a; i <= b; i++) {
 
             String num = String.valueOf(i);
-            int index = 0;
-
-            while((index = num.indexOf(pattern, index)) != -1) {
+            if(num.contains(pattern)){
                 count++;
-                index++;  
             }
         }
         System.out.println("Pattern occurs " + count + " times");

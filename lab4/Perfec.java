@@ -1,5 +1,6 @@
+
 import java.util.Scanner;
-public class CharFrequency {
+public class Perfec{
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -7,18 +8,20 @@ public class CharFrequency {
         System.out.print("Enter string: ");
         String s = sc.nextLine();
 
-        System.out.print("Enter n: ");
-        int n = sc.nextInt();
-
         int[] freq = new int[256];
         for (int i = 0; i < s.length(); i++) {
             freq[s.charAt(i)]++;
         }
-        System.out.println("Characters with frequency > " + n + " :");
+        int count=0;
         for (int i = 0; i < 256; i++) {
-            if (freq[i] > n) {
-                System.out.println((char)i + " -> " + freq[i]);
+            if (freq[i] > 1) {
+                System.out.println("It is not a perfect string");
+                break;
             }
+            count++;
+        }
+        if(count==s.length()){
+            System.out.println("perfect string");
         }
         sc.close();
     }
