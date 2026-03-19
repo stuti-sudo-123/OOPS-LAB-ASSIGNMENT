@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 interface Function {
     int evaluate(int x);
 }
@@ -10,7 +10,7 @@ class Half implements Function {
 public class Main {
     public static int[] processArray(int[] arr) {
 
-        Function f = new Half();   
+        Half f = new Half();   
 
         int[] result = new int[arr.length];
 
@@ -21,8 +21,13 @@ public class Main {
         return result;
     }
     public static void main(String[] args) {
-
-        int[] input = {10, 20, 30, 40, 50};
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter the no of elements");
+        int n= sc.nextInt();
+        int[] input=new int[n];
+        for(int i=0;i<n;i++){
+            input[i]=sc.nextInt();
+        }
 
         int[] output = processArray(input);
 
@@ -30,6 +35,7 @@ public class Main {
 
         for(int val : output)
             System.out.print(val + " ");
+        sc.close();
     }
 }
 
