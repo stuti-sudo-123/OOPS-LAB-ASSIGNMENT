@@ -15,7 +15,7 @@ public static void main(String[] args) {
             }
     }
     if(found==false){
-        System.out.println("There is no vowel");
+        System.out.println("----There is no vowel----");
     }
     sc.close();
 }
