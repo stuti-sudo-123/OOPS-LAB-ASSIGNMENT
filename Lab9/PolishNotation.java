@@ -34,7 +34,7 @@ public class PolishNotation {
         String expr = "AB*CD/+";  
 
         String part1 = "AB*";
-        String part2 = "CD/+";
+        String part2 = "CD/";
 
         ExpressionThread t1 = new ExpressionThread(part1);
         ExpressionThread t2 = new ExpressionThread(part2);
