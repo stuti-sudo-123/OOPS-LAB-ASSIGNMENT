@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class MovingText extends JFrame implements KeyListener, Runnable {
 
-    String text = "HELLOOO!!";
+    String text = "";
     int x = 500; // starting from right side
 
     public MovingText() {
@@ -43,6 +43,8 @@ public class MovingText extends JFrame implements KeyListener, Runnable {
             }
         }
     }
+
+    
 
     // Capture keyboard input
     public void keyTyped(KeyEvent e) {
